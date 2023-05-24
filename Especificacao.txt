@@ -1,0 +1,42 @@
+Desafio 2: Super Auto Machines
+Super Auto Pets é um jogo popular na internet onde jogadores montam seus times de bichinhos que lutam para ver quem vence. A seguir as regras de negócio de como funciona o jogo:
+
+O jogo começa na fase de compras, sendo que o jogador possui 10 moedas de ouro e 5 corações de vida.
+Na fase de compra o jogador visualiza o seu time, inicialmente vazio com 5 espaços para por suas peças. Além disso, visualiza 3 peças aleatórias no mercado, todas por 3 moedas de ouro.
+Para comprar a peça, basta arrastá-la para uma posição vazia no seu time. A posição onde estava a peça na loja fica vazia. Não é possível comprar peças sem recurso necessário.
+Caso o jogador deseje, pode clicar em "atualizar" pagando 1 moeda de ouro para obter uma nova loja com 3 peças aleatórias.
+Todas as peças possuem nível, experiência, tier, ataque e vida. O nível inicial e experiência inicial de todas as peças é 1. O tier, ataque e vida depende da peça.
+Os tiers vão de 1 a 6 e indicam o quão forte a peça é.
+Você pode juntar duas peças iguais arrastando uma para cima da outra. Quando isso acontecer a peça resultante terá a maior das duas vidas + 1, a maior dos dois de ataques + 1 e a soma das experiências. Com 3 de experiência a peça ficará nível 2. Com 6 de experiência a peça ficará nível 3 e não poderá ser fundida com outras peças semelhantes.
+A qualquer momento o jogador pode finalizar a etapa de compra e iniciar a batalha.
+Na batalha o jogador joga contra um time aleatório em cada round, com 3 a 5 peças aleatórias.
+Na batalha, continuamente, as peças mais a esquerda do jogador da direita, e mais a direta do jogador da esquerda se atacam. Ao se atacaram cada peça perde de vida o ataque da peça adversário. Peças morrem ao ficarem sem vida. Se isso acontecer a próxima peça toma seu lugar e a batalha continua até que um dos lados não tenham mais peças.
+Se o jogador ficar sem peças e o adversário ainda tiver peças, ele perde, perdendo uma vida. Se ambos os jogadores ficarem sem peças resultará em um empate e nada ocorre. Caso contrário, vencendo, ganha um troféu.
+Se o jogador obter 10 troféis ele ganha o jogo.
+Se o jogador ficar sem vidas ele perde o jogo.
+Se o jogador continuar com menos de 10 troféis e com corações disponíveis ele avança de rodada.
+Na rodada seguinte uma nova loja será gerada, semelhante ao "atualizar" mas gratuíto e o jogador receberá 10 de gold novamente. Além disso, e mais importante, o time do jogado e restaurado da útima loja, e todas as mudanças que ocorreram na batalha são revertidas.
+Você pode vender peças ganhando 1 de ouro por cada nível da peça.
+O jogo possui as seguintes peças:
+Implemente uma versão industrial do Super Auto Pets chamada Super Auto Machines onde cada peça é um elemento da industrial. As peças disponíveis no jogo são:
+
+Tier 1
+Martelo: 2/3.
+Chave de Fenda: 2/3.
+Esteira: 3/1, ao vender ganha um de ouro adicional.
+Tier 2
+Furadeira de Coluna: 3/5.
+Forno Industrial a Gás: 1/3, no inicio do turno de compra ganhe 1 de ouro,
+Retífica Plana: 4/2.
+Tier 3
+Furadeira de Coordenada: 3/5, ao se machucar (e ficar vivo) da dano em um inimigo aleatório.
+Forno Industrial Elétrico: 4/3.
+Retífica Cilindrica: 2/6.
+Tier 4
+Fresa: 4/5.
+Torno: 5/3, no final do turno de compra, caso você possua uma peça nível 3, recebe 2 de ataque e 2 de vida.
+Tier 5
+Torno CNC: 5/8.
+Fresa CNC: 8/4.
+Tier 6 
+Corte a Plasma CNC: 6/8.
