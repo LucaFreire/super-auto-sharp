@@ -12,7 +12,7 @@ A qualquer momento o jogador pode finalizar a etapa de compra e iniciar a batalh
 Na batalha o jogador joga contra um time aleatório em cada round, com 3 a 5 peças aleatórias.
 Na batalha, continuamente, as peças mais a esquerda do jogador da direita, e mais a direta do jogador da esquerda se atacam. Ao se atacaram cada peça perde de vida o ataque da peça adversário. Peças morrem ao ficarem sem vida. Se isso acontecer a próxima peça toma seu lugar e a batalha continua até que um dos lados não tenham mais peças.
 Se o jogador ficar sem peças e o adversário ainda tiver peças, ele perde, perdendo uma vida. Se ambos os jogadores ficarem sem peças resultará em um empate e nada ocorre. Caso contrário, vencendo, ganha um troféu.
-Se o jogador obter 10 troféis ele ganha o jogo.
+Se o jogador obter 10 troféus ele ganha o jogo.
 Se o jogador ficar sem vidas ele perde o jogo.
 Se o jogador continuar com menos de 10 troféis e com corações disponíveis ele avança de rodada.
 Na rodada seguinte uma nova loja será gerada, semelhante ao "atualizar" mas gratuíto e o jogador receberá 10 de gold novamente. Além disso, e mais importante, o time do jogado e restaurado da útima loja, e todas as mudanças que ocorreram na batalha são revertidas.
