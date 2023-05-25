@@ -13,6 +13,4 @@ public class Player
             "Player",
             System.Drawing.Color.SkyBlue);
     }
-
-
 }
