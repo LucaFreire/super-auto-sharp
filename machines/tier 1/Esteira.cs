@@ -8,9 +8,6 @@ public class Esteira : SpecialMachine
 
         this.Atk = 3;
         this.Def = 1;
-
-        this.Exp = 1;
-        this.Level = 1;
     }
 
     public override void SpecialMethod()

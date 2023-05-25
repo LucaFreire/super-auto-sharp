@@ -8,8 +8,5 @@ public class ChaveDeFenda : Machine
 
         this.Atk = 2;
         this.Def = 3;
-
-        this.Exp = 1;
-        this.Level = 1;
     }
 }
