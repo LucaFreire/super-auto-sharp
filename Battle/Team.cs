@@ -5,16 +5,15 @@ public class Team
 {
     public string Name { get; private set; }
     public Color ColorTeam { get; private set; }
-    public Machine[] Machines { get; private set; }
-    private List<Machine> backup;
+    private int index = 0;
+    public Machine[] Machines { get; private set; } = new Machine[5];
+    private List<Machine> backup = new List<Machine>();
     public IEnumerable<Machine> Backup => backup;
 
-    public Team(string name, Color color, Machine[] machines)
+    public Team(string name, Color color)
     {
         this.Name = name;
         this.ColorTeam = color;
-        this.Machines = machines;
-        this.backup = machines.ToList();
     }
 
     public void VerifyAlive()
@@ -26,9 +25,15 @@ public class Team
         this.backup = aux;
     }
 
-    public void setMachines(Machine[] machines)
+    public void SetMachines(Machine[] machines)
     {
         this.Machines = machines;
         this.backup = machines.ToList();
+    }
+
+    public void AddMachine(Machine machine)
+    {
+        this.Machines[index] = machine;
+        index++; 
     }
 }
