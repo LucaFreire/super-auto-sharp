@@ -17,10 +17,6 @@ public class FactoryMachine : FactoryMachineMethod
                 return new ChaveDeFenda();
             case "Esteira":
                 return new Esteira();
-            case "Martelo":
-                return new Martelo();
-            case "Martelo":
-                return new Martelo();
             default:
                 throw new Exception("Máquina inválida.");
         }

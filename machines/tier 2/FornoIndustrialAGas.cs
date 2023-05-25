@@ -1,5 +1,5 @@
 namespace SAS;
-public class FornoIndustrialAGas : Machine
+public class FornoIndustrialAGas : SpecialMachine
 {
     public FornoIndustrialAGas()
     {
@@ -8,5 +8,10 @@ public class FornoIndustrialAGas : Machine
 
         this.Atk = 1;
         this.Def = 3;
+    }
+
+    public override void SpecialMethod() // no inicio do turno de compra ganhe 1 de ouro
+    {
+        throw new NotImplementedException();
     }
 }
