@@ -19,7 +19,7 @@ public abstract class Machine
     {
         System.Console.WriteLine(this);
         System.Console.WriteLine(machine);
-        
+
         this.Def -= machine.Atk;
         machine.Def -= this.Atk;
 
@@ -32,7 +32,37 @@ public abstract class Machine
         => this.Name + " |" + this.Atk + "⚔" + this.Def + "❤";
 
     public virtual int GetValue()
-        => this.Tier;
+        => this.Level;
+
+    public void Join(Machine mach2)
+    {
+        if (this.Level == 3 || mach2.Level == 3)
+            return;
+
+        this.Exp += mach2.Exp;
+        this.Atk = (Math.Max(this.Atk, mach2.Atk) + 1);
+        this.Def = (Math.Max(this.Def, mach2.Def) + 1);
+
+        this.VerifyLevelUp();
+    }
+
+    private void VerifyLevelUp()
+    {
+        if (this.Level == 3)
+            return;
+
+        switch (this.Level)
+        {
+            case 1:
+                if (this.Exp >= 3)
+                    this.Level = 2;
+                break;
+            case 2:
+                if (this.Exp >= 6)
+                    this.Level = 3;
+                break;
+        }
+    }
 }
 
 public abstract class SpecialMachine : Machine
