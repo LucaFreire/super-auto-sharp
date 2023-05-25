@@ -15,4 +15,12 @@ public class Player
     }
 
 
+    public void Sell(Machine machine)
+    {
+        Machine removed = PlayerTeam.RemoveMachine(machine);
+        if (removed != null)
+            this.Money += removed.GetValue();
+
+    }
+
 }

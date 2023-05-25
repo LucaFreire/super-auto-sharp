@@ -31,9 +31,53 @@ public class Team
         this.backup = machines.ToList();
     }
 
-    public void AddMachine(Machine machine)
+    public void Reset()
+        => this.backup = Machines.ToList();
+
+    public Team AddMachine(Machine machine)
     {
         this.Machines[index] = machine;
         index++; 
+        return this;
+    }
+
+    public Machine RemoveMachine(Machine machine)
+    {
+        int index=0;
+        Machine removed = null;
+        for (int i = 0; i < Machines.Length; i++)
+        {
+            if(Machines[i] == machine)
+            {
+                index = i;
+                removed = Machines[i];
+                Machines[i] = null;
+            }
+        }
+
+        OrganizeTeam();
+
+        return removed;
+    }
+
+    public void OrganizeTeam()
+    {
+        for (int i = index; i < Machines.Length; i++)
+        {
+            if (Machines[i] == null)
+            {
+                Machines[i] = Machines[i + 1];
+                Machines[i + 1] = null;
+                break;
+            }
+        }
+    }
+
+    public override string ToString()
+    {
+        string str = $"{this.Name} | {this.ColorTeam}";
+        foreach (var item in Machines)
+            str+= "\n" + item;
+        return str;
     }
 }
