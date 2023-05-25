@@ -14,6 +14,22 @@ public abstract class Machine
         this.Exp = 1;
         this.Level = 1;
     }
+
+    public void Hit(Machine machine)
+    {
+        System.Console.WriteLine(this);
+        System.Console.WriteLine(machine);
+        
+        this.Def -= machine.Atk;
+        machine.Def -= this.Atk;
+
+        System.Console.WriteLine();
+        System.Console.WriteLine(this);
+        System.Console.WriteLine(machine);
+    }
+
+    public override string ToString()
+        => this.Name + " |" + this.Atk + "⚔" + this.Def + "❤";
 }
 
 public abstract class SpecialMachine : Machine
