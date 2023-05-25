@@ -2,6 +2,7 @@ public class Battle
 {
     public Team Team1 { get; set; }
     public Team Team2 { get; set; }
+    private bool EndOfBattle = false;
     public Battle(Team t1, Team t2)
     {
         this.Team1 = t1;
@@ -10,7 +11,18 @@ public class Battle
 
     public void Battle()
     {
-        IMachine m1 = Team1.Strategy.GetAttakerMachine();
-        IMachine m2 = Team2.Strategy.GetDeffenderMachine();
+        // ? Backup of team1 vc backup team2
+        while(!EndOfBattle)
+        {
+            int m1_index = Team1.Count;
+            int m2_index = Team2.Count;
+
+            
+
+
+            EndOfBattle = 
+                Team1.Backup.Count == 0 ||
+                Team2.Backup.Count == 0;
+        }
     }
 }

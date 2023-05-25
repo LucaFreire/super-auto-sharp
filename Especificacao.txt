@@ -14,7 +14,7 @@ Na batalha, continuamente, as peças mais a esquerda do jogador da direita, e ma
 Se o jogador ficar sem peças e o adversário ainda tiver peças, ele perde, perdendo uma vida. Se ambos os jogadores ficarem sem peças resultará em um empate e nada ocorre. Caso contrário, vencendo, ganha um troféu.
 Se o jogador obter 10 troféus ele ganha o jogo.
 Se o jogador ficar sem vidas ele perde o jogo.
-Se o jogador continuar com menos de 10 troféis e com corações disponíveis ele avança de rodada.
+Se o jogador continuar com menos de 10 troféus e com corações disponíveis ele avança de rodada.
 Na rodada seguinte uma nova loja será gerada, semelhante ao "atualizar" mas gratuíto e o jogador receberá 10 de gold novamente. Além disso, e mais importante, o time do jogado e restaurado da útima loja, e todas as mudanças que ocorreram na batalha são revertidas.
 Você pode vender peças ganhando 1 de ouro por cada nível da peça.
 O jogo possui as seguintes peças:
