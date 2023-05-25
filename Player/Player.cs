@@ -13,4 +13,11 @@ public class Player
             "Player",
             System.Drawing.Color.SkyBlue);
     }
+    public void Sell(Machine machine)
+    {
+        Machine removed = PlayerTeam.RemoveMachine(machine);
+        if (removed != null)
+            this.Money += removed.GetValue();
+
+    }
 }
