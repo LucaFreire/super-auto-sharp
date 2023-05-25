@@ -16,11 +16,8 @@ public class TeamBattle
         // ? Backup of team1 vc backup team2
         while(!EndOfBattle)
         {
-            int m1_index = Team1.Backup.Count -1;
-            int m2_index = Team2.Backup.Count -1;
-
-            Machine m1 = Team1.Backup[m1_index];
-            Machine m2 = Team2.Backup[m2_index];
+            Machine m1 = Team1.Backup.Last();
+            Machine m2 = Team2.Backup.Last();
 
 
             System.Console.WriteLine("-=-=-=-=-=-= BRAWL =-=-=-=-=-=-");
@@ -31,10 +28,10 @@ public class TeamBattle
             Team2.VerifyAlive();
 
             EndOfBattle = 
-                Team1.Backup.Count == 0 ||
-                Team2.Backup.Count == 0;
+                Team1.Backup.Count() == 0 ||
+                Team2.Backup.Count() == 0;
         }
-        if (Team1.Backup.Count == 0)
+        if (Team1.Backup.Count() == 0)
             return Team2;
         return Team1;
     }
