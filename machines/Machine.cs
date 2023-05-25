@@ -30,6 +30,9 @@ public abstract class Machine
 
     public override string ToString()
         => this.Name + " |" + this.Atk + "⚔" + this.Def + "❤";
+
+    public virtual int GetValue()
+        => this.Tier;
 }
 
 public abstract class SpecialMachine : Machine

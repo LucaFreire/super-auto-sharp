@@ -14,4 +14,7 @@ public class Esteira : SpecialMachine
     {
         throw new NotImplementedException();
     }
+
+    public override int GetValue()
+        => this.Tier + 1;
 }

@@ -1,12 +1,11 @@
+namespace SAS;
 public class Shop
 {
-    private List<IMachine> allMachines = new List<IMachine>();
-    private List<IMachine> stock = new List<IMachine>();
-
+    private List<Machine> stock = new List<Machine>();
     private void GetStock()
     {
-        List<IMachine> newStock = new List<IMachine>();
-        newStock = ShuffleMachine.Shuffle(allMachines);
+        List<Machine> newStock = new List<Machine>();
+        newStock = RandomMachines.GetRandomMachines();
         this.stock = newStock;
     }
 

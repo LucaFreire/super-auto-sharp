@@ -7,7 +7,7 @@ public static class RandomMachines
         List<Machine> listRet = new List<Machine>();
         
         FactoryMachine factory = new FactoryMachine();
-        string[] machineNames = factory.Machines.ToArray();
+        string[] machineNames = factory.MachineNames.ToArray();
 
         for (int i = 0; i < 3; i++)
             listRet.Add(factory.Create(machineNames[rand.Next(0, machineNames.Length - 1)]));

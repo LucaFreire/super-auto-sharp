@@ -1,3 +1,0 @@
-// Apagar
-public class IMachine
-{}

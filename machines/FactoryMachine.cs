@@ -7,6 +7,11 @@ public interface FactoryMachineMethod
 
 public class FactoryMachine : FactoryMachineMethod
 {
+    public List<string> MachineNames = new List<string>()
+    {"martelo", "chave de fenda", "esteira", "forno industrial a gas", "furadeira de coluna", 
+    "retifica plana", "forno industrial eletrico", "furadeira de coordenada", "retifica cilindrica", 
+    "fresa", "torno", "fresa cnc", "torno cnc", "corte a plasma cnc"};
+    
     public Machine Create(string name)
     {
         switch(name.ToLower())
