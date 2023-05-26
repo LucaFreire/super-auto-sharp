@@ -1,20 +1,10 @@
-namespace SAS;
+using SAS;
 
-class Program
-{
-    static void Main()
-    {
-        FactoryMachine factory = new FactoryMachine();
-        var list = factory.CreateMachines();
-        foreach(Machine mac in list)
-        {
-            Console.WriteLine(mac);
-        }
+Player p1 = new Player();
+FactoryMachine f = new FactoryMachine();
 
-        var listt = RandomMachines.GetRandomMachines();
-        foreach(Machine mac in listt)
-        {
-            Console.WriteLine(mac);
-        }
-    }
-}
+var allMachines = f.CreateMachines();
+
+p1.Buy(allMachines[0]);
+
+Console.WriteLine(p1.PlayerTeam);
