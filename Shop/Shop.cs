@@ -1,12 +1,19 @@
 namespace SAS;
 public class Shop
 {
-    private List<Machine> stock = new List<Machine>();
-    private void GetStock()
+    public static List<Machine> stock = new List<Machine>();
+    private void getStock(bool clear = false)
     {
+        if(clear)
+            stock.Clear();
         List<Machine> newStock = new List<Machine>();
         newStock = RandomMachines.GetRandomMachines();
-        this.stock = newStock;
+        stock = newStock;
     }
-
+    public void ShowStock()
+    {
+        getStock();
+        foreach (var item in stock)
+            Console.WriteLine($"{item.Name}: {item.Atk} / {item.Def}");
+    }
 }

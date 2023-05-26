@@ -8,6 +8,7 @@ public abstract class Machine
     public int Def { get; protected set; }
     public int Exp { get; protected set; }
     public int Level { get; protected set; }
+    public static int BuyValue { get; protected set; } = 3;
 
     public Machine()
     {

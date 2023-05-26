@@ -31,8 +31,16 @@ public class TeamBattle
                 Team1.Backup.Count() == 0 ||
                 Team2.Backup.Count() == 0;
         }
+
         if (Team1.Backup.Count() == 0)
+        {
+            Team1.Reset(); // * Reseting the backup to another battle
+            Team2.Reset();
             return Team2;
+        }
+
+        Team1.Reset();
+        Team2.Reset();
         return Team1;
     }
 
