@@ -20,8 +20,14 @@ public class Team
     {
         List<Machine> aux = new List<Machine>();
         foreach (var item in this.Backup)
+        {
+            if(item == null)
+                continue;
+
             if (item.Def > 0)
                 aux.Add(item);
+        }
+
         this.backup = aux;
     }
 
@@ -73,9 +79,6 @@ public class Team
         }
     }
 
-    public void BattleEnd()
-        => this.backup = Machines.ToList();
-    
     public override string ToString()
     {
         string str = $"{this.Name} | {this.ColorTeam}";

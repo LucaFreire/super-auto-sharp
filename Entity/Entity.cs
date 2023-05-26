@@ -17,6 +17,8 @@ public abstract class Entity
     
     public void Buy(Machine machine)
     {
+        if (machine == null)
+            return;
         if(this.Money >= Machine.BuyValue)
         {
             this.Money -= Machine.BuyValue;

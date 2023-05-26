@@ -16,9 +16,10 @@ public class EnemyComportament : IComportament
         if (firstRound < 3)
         {
             firstRound++;
-            return shop.Stock.First();
+            var buy = (shop.Stock.First());
+            shop.RemoveFromStock(buy);
+            return buy;
         }
-
         return null;
     }
 }
