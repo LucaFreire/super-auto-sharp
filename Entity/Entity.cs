@@ -4,15 +4,9 @@ using SAS.Entities;
 public abstract class Entity
 {
     
-    public int Money { get; private set; } = 10;
+    public int Money { get; protected set; } = 10;
     public Team PlayerTeam { get; set; }
-    public IComportament comp { get; private set; }
-    public Entity()
-    {
-        PlayerTeam = new Team(
-            "Player",
-            System.Drawing.Color.SkyBlue);
-    }
+    public IComportament Comportament { get; protected set; }
     
     public void Sell(Machine machine)
     {
@@ -27,7 +21,6 @@ public abstract class Entity
         {
             this.Money -= Machine.BuyValue;
             this.PlayerTeam.AddMachine(machine);
-            machine.RemoveFromStock(ref Shop.stock);
         }
     }
 }

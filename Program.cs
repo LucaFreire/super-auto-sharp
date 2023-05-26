@@ -1,10 +1,21 @@
 using SAS;
 
 Player p1 = new Player();
-FactoryMachine f = new FactoryMachine();
+BasicEnemy bs = new BasicEnemy();
 
-var allMachines = f.CreateMachines();
+while (!p1.Comportament.Finished())
+{
+    var maquina = p1.Comportament.GetBuy();
+    p1.Buy(maquina);
+    
+    System.Console.WriteLine();
+    System.Console.WriteLine(p1.PlayerTeam);
+}
+p1.Comportament.AttShop();
 
-p1.Buy(allMachines[0]);
+while (!bs.Comportament.Finished())
+    bs.Comportament.GetBuy();
+bs.Comportament.AttShop();
 
-Console.WriteLine(p1.PlayerTeam);
+TeamBattle battle1 = new TeamBattle(p1.PlayerTeam, bs.PlayerTeam);
+var ganhou = (battle1.Battle());
