@@ -1,13 +1,12 @@
 namespace SAS;
 
-public class Player
+public abstract class Entity
 {
-    public int Life { get; private set; } = 5;
+    
     public int Money { get;  set; } = 10;
-    public int Trophy { get; private set; } = 0;
     public Team PlayerTeam { get; set; }
 
-    public Player()
+    public Entity()
     {
         PlayerTeam = new Team(
             "Player",
@@ -18,6 +17,5 @@ public class Player
         Machine removed = PlayerTeam.RemoveMachine(machine);
         if (removed != null)
             this.Money += removed.GetValue();
-
     }
 }

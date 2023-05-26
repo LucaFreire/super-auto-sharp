@@ -73,6 +73,9 @@ public class Team
         }
     }
 
+    public void BattleEnd()
+        => this.backup = Machines.ToList();
+    
     public override string ToString()
     {
         string str = $"{this.Name} | {this.ColorTeam}";
