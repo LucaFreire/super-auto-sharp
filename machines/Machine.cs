@@ -1,5 +1,5 @@
 namespace SAS;
-
+using static Console;
 public abstract class Machine
 {
     public string Name { get; protected set; }
@@ -38,7 +38,10 @@ public abstract class Machine
     public void Join(Machine mach2)
     {
         if (this.Level == 3 || mach2.Level == 3)
+        {
+            WriteLine("Você não pode combinar máquinas de nível 3!");
             return;
+        }
 
         this.Exp += mach2.Exp;
         this.Atk = (Math.Max(this.Atk, mach2.Atk) + 1);
@@ -56,11 +59,11 @@ public abstract class Machine
         {
             case 1:
                 if (this.Exp >= 3)
-                    this.Level = 2;
+                    this.Level++;
                 break;
             case 2:
                 if (this.Exp >= 6)
-                    this.Level = 3;
+                    this.Level++;
                 break;
         }
     }
