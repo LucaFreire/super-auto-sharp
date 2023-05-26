@@ -17,9 +17,11 @@ class Program
         //     Console.WriteLine(mac);
         // }
     
-        Shop sh = new Shop();
+        // Shop sh = new Shop();
 
-        sh.ShowStock();
-    
+        // sh.ShowStock();
+
+        ConsoleWriter.Init();
+        ConsoleWriter.showMenu();
     }
 }
