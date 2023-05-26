@@ -1,4 +1,5 @@
 namespace SAS;
+using SAS.Entities;
 
 public abstract class Entity
 {

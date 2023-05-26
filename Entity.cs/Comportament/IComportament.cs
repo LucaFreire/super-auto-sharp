@@ -1,4 +1,4 @@
-namespace SAS;
+namespace SAS.Entities;
 
 public interface IComportament
 {
