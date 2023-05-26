@@ -1,4 +1,4 @@
-namespace SAS;
+using SAS;
 
 class Program
 {
