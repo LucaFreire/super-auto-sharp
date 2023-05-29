@@ -14,8 +14,11 @@ public class Shop
         => getStock();
     public void ShowStock()
     {
+        Console.WriteLine("----------------------\nLOJA ATUAL:\n");
         foreach (var item in stock)
             Console.WriteLine($"{item.Name}: {item.Atk} / {item.Def}");
+            
+        Console.WriteLine();
     }
 
     public void RemoveFromStock(Machine machine)

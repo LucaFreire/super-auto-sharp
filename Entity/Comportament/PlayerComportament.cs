@@ -4,6 +4,7 @@ public class PlayerComportament : IComportament
 {
     public override bool Finished()
     {
+        Console.WriteLine("Pressione qualquer botão para entrar na loja ou enter para continuar:");
         string input = Console.ReadLine();
         if (input == "")
             return true;
@@ -16,6 +17,7 @@ public class PlayerComportament : IComportament
         System.Console.WriteLine("Shopping: ");
         
         this.shop.ShowStock();
+        Console.WriteLine("Escolha sua máquina: ");
         input = Console.ReadLine();
         var buy = shop.Stock.FirstOrDefault(e => e.Name.ToLower() == input.ToLower());
         System.Console.WriteLine("Comprado: " + buy);
